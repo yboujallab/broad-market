@@ -1,0 +1,24 @@
+<div class="jumbotron">
+   <div ALIGN=CENTER>
+    <table>
+    <tr><td lign=left><p >Log in</p></td></tr>
+    <%= render 'shared/flash_error' %>
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+      <tr><td><div>
+        <%= f.text_field :email, :style => "width:300px;", :class=>"form-control",:placeholder => "email" %>
+      </div></td></tr>
+     <tr><td> <br /></td></tr>
+     <tr><td> <div>
+        <%= f.password_field :password, :style => "width:300px;",:class=>"form-control",  :placeholder => "password" %>
+      </div></td></tr>
+      <br />
+      <tr><td> <br /></td></tr>
+      <tr><td><div >
+        <%= f.submit "Log in",:class => "btn btn-primary btn-sm" %>
+      </div></td></tr>
+    <% end %>
+    <tr><td> <br /></td></tr>
+    <tr><td><p><%= link_to "Need an account? Sign up for free", signup_path %></p></td></tr>
+    </table>
+  </div>
+</div>

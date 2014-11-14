@@ -1,0 +1,53 @@
+<div class="jumbotron">
+<h1>Editing profil</h1>
+  <%= render 'shared/navbar_user' %>
+  <%= render 'shared/flash_error' %>
+  <br />
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >First name :</label>
+        <div class="col-lg-10">
+           <%= f.text_field :first_name,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div>
+     <br />
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >Last name :</label>
+        <div class="col-lg-10">
+           <%= f.text_field :last_name,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div> 
+     <br />
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >Username :</label>
+        <div class="col-lg-10">
+           <%= f.text_field :user_name,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div>
+     <br />
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >Email :</label>
+        <div class="col-lg-10">
+           <%= f.text_field :email,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div>
+     <br />
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >Password :</label>
+        <div class="col-lg-10">
+           <%= f.password_field :password,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div>
+     <br />
+    <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label" >Password Confirmation :</label>
+        <div class="col-lg-10">
+           <%= f.password_field :password_confirmation,:style => "width:300px;", :class=>"form-control" %>
+        </div>
+    </div>
+    <div>
+      <%= f.submit "Update",:class => "btn btn-primary" %>
+    </div>
+    <% end %>
+</div>

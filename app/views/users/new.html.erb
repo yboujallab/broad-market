@@ -1,35 +1,36 @@
 <div class="jumbotron">
- <DIV ALIGN=CENTER>
+ <DIV ALIGN=CENTER class="form-group">
   <h1>Sign up</h1>
+  <%= render 'shared/flash_error' %>
     <br />
   <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
-      <%= f.text_field :first_name, :placeholder => "First name" %>
+      <%= f.text_field :first_name,:style => "width:300px;", :class=>"form-control", :placeholder => "First name" %>
     </div>
     <br />
     <div class="field">
-      <%= f.text_field :last_name, :placeholder => "Last name" %>
+      <%= f.text_field :last_name,:style => "width:300px;",:class=>"form-control",:placeholder => "Last name" %>
     </div>  
     <br />
     <div class="field">
-      <%= f.text_field :user_name, :placeholder => "Username" %>
+      <%= f.text_field :user_name,:style => "width:300px;",:class=>"form-control", :placeholder => "Username" %>
     </div>    
     <br />
     <div class="field">
-      <%= f.text_field :email, :placeholder => "email" %>
+      <%= f.text_field :email,:style => "width:300px;",:class=>"form-control", :placeholder => "email" %>
     </div>
     <br />
     <div class="field">
-      <%= f.password_field :password, :placeholder => "password" %>
+      <%= f.password_field :password,:style => "width:300px;",:class=>"form-control", :placeholder => "password" %>
     </div>
     <br />
     <div class="field">
-      <%= f.password_field :password_confirmation, :placeholder => "password confirmation" %><br />
+      <%= f.password_field :password_confirmation,:style => "width:300px;", :class=>"form-control",:placeholder => "password confirmation" %><br />
     </div>
     <br />
     <div class="actions">
-      <%= f.submit "Inscription" %>
+      <%= f.submit "Sing up",:class => "btn btn-primary" %>
     </div>
   <% end %>
   </div>

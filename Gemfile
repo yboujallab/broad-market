@@ -34,7 +34,7 @@ gem 'rails_12factor', group: :production
 
 #YB: Bootstrap gem
 gem 'bootstrap-sass', '~> 3.3.1'
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '~> 4.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -47,4 +47,5 @@ gem 'autoprefixer-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 

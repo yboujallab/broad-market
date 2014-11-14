@@ -3,14 +3,21 @@
   <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Broad Market</a>
+       <ul class="navbar-header">
+        <li><%= link_to "Broad Market", root_path, {:class => "navbar-brand"}  %></a>
+      </ul>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Accueil", root_path %></li>
-        <li><%= link_to "Aide", help_path %></li>
-        <li><%= link_to "A propos", about_path %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", contact_path %></li>        
+        <% if signed_in? %>
+          <li><%= link_to "Logout", signout_path, :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Login", signin_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

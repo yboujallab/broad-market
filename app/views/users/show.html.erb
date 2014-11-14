@@ -1,0 +1,41 @@
+<div class="jumbotron">
+<%= render 'shared/navbar_user' %>
+<br />
+<br />
+<form class="form-horizontal">
+  <fieldset>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label" >First name :</label>
+      <div class="col-lg-10">
+        <input class="form-control" disabled="" placeholder=<%= @user.first_name %> type="text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Last name :</label>
+      <div class="col-lg-10">
+        <input class="form-control" disabled="" placeholder=<%= @user.last_name %> type="text">
+      </div>
+    </div>   
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Username :</label>
+      <div class="col-lg-10">
+        <input class="form-control" disabled="" placeholder=<%= @user.user_name %> type="text">
+      </div>
+    </div>      
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Email :</label>
+      <div class="col-lg-10">
+        <input class="form-control" disabled="" placeholder=<%= @user.email %> type="password">
+      </div>
+     </div> 
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+		  <%= link_to "Update", edit_user_path(current_user), :class => "btn btn-primary btn-sm" %>
+      </div>
+    </div>    
+    </div>
+  </fieldset>
+</form>
+</div>
+
+

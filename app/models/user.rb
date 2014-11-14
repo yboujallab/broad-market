@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
 	validates(:last_name, :presence => true, :length   => { :maximum => 50 } )
 	#Validation of email	  
 	validates(:email, :presence => true, :format   => { :with => email_regex },:uniqueness => { :case_sensitive => false })
+	#Validation of user name	  
+	validates(:user_name, :presence => true, :length   => { :maximum => 50 } )
 	# Create virtuel field 'password_confirmation'.
     validates :password, :presence     => true,
                        :confirmation => true,
